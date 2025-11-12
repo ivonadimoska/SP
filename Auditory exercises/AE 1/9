@@ -1,0 +1,14 @@
+//Write a program that reads the price of a product from the keyboard and then
+//prints its price with added value-added tax(VAT)
+//Hint: VAT is 18% of the initial price.
+
+#include<iostream>
+using namespace std;
+
+int main() {
+    float price;
+    cout<<"Enter price: "<<endl;
+    cin>>price;
+    cout<<"The total price is: "<<price*1.18<<endl;
+    return 0;
+}
