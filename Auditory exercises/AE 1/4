@@ -1,0 +1,15 @@
+//Write a program that calculates the arithmetic mean of the numbers 3, 5, and 12.
+
+#include<iostream>
+using namespace std;
+
+int main() {
+    int a = 3;
+    int b = 5;
+    int c = 12;
+    int sum = a+b+c;
+    float average = (sum/3.0);
+    cout<<"Average = "<<average<<endl;
+
+    return 0;
+}
