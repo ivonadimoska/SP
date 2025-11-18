@@ -1,0 +1,17 @@
+//Write a program to calculate the sum of all even two-digit numbers.
+//The calculated sum is printed on the screen.
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int number = 10;
+    int sum = 0;
+
+    while (number<=99) {
+        sum+=number;
+        number+=2;
+    }
+    cout<<"Sum: "<<sum<<endl;
+    return 0;
+}
