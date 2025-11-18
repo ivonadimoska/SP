@@ -1,0 +1,29 @@
+//The coordinates of a point on a plane are entered from the keyboard.
+//Write a program that will print to which quadrant the entered point belongs.
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x,y;
+    cin>>x>>y;
+
+    if (x>0 && y>0) {
+        cout<<"Quadrant 1"<<endl;
+    }
+    else if (x<0 && y>0) {
+        cout<<"Quadrant 2"<<endl;
+    }
+    else if (x<0 && y<0) {
+        cout<<"Quadrant 3"<<endl;
+    }
+    else if (x>0 && y<0) {
+        cout<<"Quadrant 4"<<endl;
+    }
+    else if (x==0 && y==0) {
+        cout<<"Origin"<<endl;
+    }else {
+        cout<<"Invalid input"<<endl;
+    }
+    return 0;
+}
