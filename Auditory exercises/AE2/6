@@ -1,0 +1,28 @@
+//Write a program to calculate the age of a dog in human years.
+//The dog’s age is read from standard input.
+//If a negative number is entered for the age, print the following message:
+//“ Age must be a positive number”.
+//Note: For the first two years, one dog year is equal tom 10.5 human years.
+//After that, each dog year is equal to 4 human years.
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int dogAge, humanAge;
+    cin>>dogAge;
+
+    if (dogAge<0) {
+        cout<<"Error";
+    }
+    else {
+        if (dogAge<=2) {
+            humanAge = dogAge * 10.5;
+        }
+        else {
+            humanAge = dogAge * 10.5 + (dogAge-2)*4;
+        }
+    }
+    cout<<"Human age of the dog is: "<<humanAge;
+    return 0;
+}
