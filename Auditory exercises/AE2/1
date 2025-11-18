@@ -1,0 +1,15 @@
+//Write a program that reads a character from the keyboard
+// and prints 1 if it is a lowercase letter or 0 if it is an uppercase letter.
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    char character;
+    cin>>character;
+
+    int result = (character>='a' && character<='z');
+    cout<<result;
+
+    return 0;
+}
