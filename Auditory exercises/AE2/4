@@ -1,0 +1,37 @@
+//The lengths of three line segments are entered from the keyboard
+//in random order. Write a program that will check whether a triangle can
+//be constructed from the line segments, and if it can, whether it is a right triangle
+//and calculate its area. Otherwise, appropriate messages should be printed.
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a,b,c;
+    double area;
+    cin>>a>>b>>c;
+
+    if (a+b<=c || b+c<=a || a+c<=b) {
+        cout<<"Triangle cant be formed!"<<endl;
+    }
+    else {
+        if ((c*c)==(a*a+b*b) || (b*b)==(a*a+c*c) || (a*a)==(b*b+c*c)) {
+            cout<<"Whe have a right triangle with area: "<<endl;
+            
+            if (a*a == b*b + c*c) {
+                area = 0.5 * b * c;
+            }
+            else if (b*b == a*a + c*c) {
+                area = 0.5 * a * c;
+            }
+            else {
+                area = 0.5 * a * b;
+            }
+            
+            cout<<area<<endl;
+        }
+        else {
+            cout<<"We dont have a right triangle!"<<endl;
+        }
+    }
+}
