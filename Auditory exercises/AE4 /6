@@ -1,0 +1,33 @@
+//Write a program that will determine the difference between the sums
+//of the numbers at even and odd positions (according to the order of entry)
+//from N integers entered from the keyboard.
+//If this difference is less than 10, the screen prints
+//“The two sums are similar”, otherwise “The two sums differ greatly”.
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int sumOfEven = 0;
+    int sumOfOdd = 0;
+    int n, number;
+    int difference = 0;
+
+    cin>>n;
+
+    for (int i = 0; i<n; i++) {
+        cin>>number;
+        if (i%2==0) {
+            sumOfEven += number;
+        }else {
+            sumOfOdd += number;
+        }
+    }
+    difference = sumOfEven - sumOfOdd;
+    if (difference<10) {
+        cout<<"The two sums are similar."<<endl;
+    }else {
+        cout<<"The two sums differ greatly."<<endl;
+    }
+    return 0;
+}
