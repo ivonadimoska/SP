@@ -1,0 +1,28 @@
+//Write appropriate functions for calculating a diameter,
+//perimeter, and square of a circle whose radius is entered as an argument.
+//Then write a program in which these functions will be called
+//for R (entered from the keyboard) to calculate the diameter, perimeter,
+//and surface of the corresponding circle.
+
+#include <iostream>
+using namespace std;
+
+double perimeter(double radius) {
+    return 2 * 3.14 * radius;
+}
+double diameter(double radius) {
+    return 2*radius;
+}
+double area(double radius) {
+    return 3.14 * radius * radius;
+}
+
+int main() {
+    double radius;
+    cin>>radius;
+
+    cout<<"Diameter: "<<diameter(radius)<<endl;
+    cout<<"Perimeter: "<<perimeter(radius)<<endl;
+    cout<<"Area: "<<area(radius)<<endl;
+    return 0;
+}
