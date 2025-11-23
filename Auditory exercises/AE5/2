@@ -1,0 +1,25 @@
+//Write a program that will print all four-digit natural numbers
+//that are divided by the sum of the two numbers composed of
+//the first two digits and the last two digits of the four-digit number.
+//It should eventually print out how many such numbers have been found.
+
+#include <iostream>
+using namespace std;
+
+int sum(int number) {
+    return number%100 + number / 100;
+}
+
+int main() {
+    int n;
+    int total =0;
+
+    for (n = 1000; n<=9999;n++) {
+        if (n%sum(n) ==0) {
+            cout << n << endl;
+            total++;
+        }
+    }
+    cout<<"Total numbers printed: "<<total<<endl;
+    return 0;
+}
