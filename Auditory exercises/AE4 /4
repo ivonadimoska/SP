@@ -1,0 +1,27 @@
+//Write a program that will determine the number with the
+//maximum value from an unknown number of integers entered from the keyboard.
+//In this case, numbers greater than 100 are not taken into account
+//i.e. they are ignored. The program ends if an invalid number representation
+//is entered.
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int number, max;
+
+    if (cin>>max) {
+        while (cin>>number) {
+            if (number>100) {
+                continue;
+            }
+            if (number>max) {
+                max = number;
+            }
+            cout<<max<<endl;
+        }
+    }else {
+        cout<<"No number was enered!"<<endl;
+    }
+    return 0;
+}
