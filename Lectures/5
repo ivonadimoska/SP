@@ -1,0 +1,20 @@
+// from the lecture about arrays
+
+//Write a program that calculates the average of 10 numbers
+//entered from the keyboard.
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int number;
+    int sum = 0;
+    
+    for (int i=0;i<10;i++) {
+        cin>>number;
+        sum += number;
+    }
+    
+    cout<<"Average: "<<sum/10.0<<endl;
+    return 0;
+}
