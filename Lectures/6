@@ -1,0 +1,28 @@
+//Write a program that calculates the average of 10 numbers.
+//For every number print whether it is bigger or
+//smaller than the average.
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int number[10];
+    int sum=0;
+    float average=0;
+
+    for (int i=0;i<10;i++) {
+        cin>>number[i];
+        sum+=number[i];
+    }
+    average=sum/10.0;
+    for (int i=0;i<10;i++) {
+        if (number[i]>average) {
+            cout<<number[i]<<" is bigger than the average!"<<endl;
+        }else if (number[i]<average) {
+            cout<<number[i]<<" is smaller than the average!"<<endl;
+        }else {
+            cout<<number[i]<<" is equal to the average!"<<endl;
+        }
+    }
+    return 0;
+}
