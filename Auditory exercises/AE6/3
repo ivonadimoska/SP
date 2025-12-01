@@ -1,0 +1,40 @@
+//Write a program that checks if a given array of n elements, read from the standard input,
+//is strictly increasing, strictly decreasing,
+//or neither strictly increasing nor strictly decreasing.
+//Print the result to the screen.
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int size;
+    bool increasing = true;
+    bool decreasing = true;
+    cout<<"Enter the size of the array:"<<endl;
+    cin>>size;
+
+    int myArray[size];
+    cout<<"Enter the elements of the array:"<<endl;
+    for(int i=0;i<size;i++) {
+        cin>>myArray[i];
+    }
+    for(int i=0;i<size-1;i++) {
+        if(myArray[i]<myArray[i+1]) {
+            decreasing = false;
+        }
+        if(myArray[i]>myArray[i+1]) {
+            increasing = false;
+        }
+
+    }
+    
+    if(increasing) {
+        cout<<"The array is increasing!"<<endl;
+    }else if(decreasing) {
+        cout<<"The array is decreasing!"<<endl;
+    }else{
+        cout<<"The array is not decreasing or increasing!"<<endl;
+    }
+
+    return 0;
+}
