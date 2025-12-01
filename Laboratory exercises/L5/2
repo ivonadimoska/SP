@@ -1,0 +1,29 @@
+//From the standard input, a number N and an array of N integers are read.
+//For each element in the array, print to the standard output how many other
+//elements in the array are greater than or equal to that element
+
+#include<iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cin>>n;
+
+    int numbers[n];
+    for(int i=0;i<n;i++) {
+        cin>>numbers[i];
+    }
+
+
+    for(int i=0;i<n;i++) {
+        int counter = 0;
+        for(int j=0;j<n;j++) {
+            if(j!=i && numbers[i]<=numbers[j]) {
+                counter++;
+            }
+        }
+        cout<<"["<<i<<"] "<<numbers[i]<<":"<<counter<<endl;
+    }
+
+    return 0;
+}
