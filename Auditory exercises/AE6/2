@@ -1,0 +1,50 @@
+//Write a program that, for an array whose elements are entered
+//from the keyboard, calculates the sum of even elements,
+//the sum of odd elements, and the ratio between the
+//number of even and odd elements. Print the results to the screen.
+
+#include<iostream>
+using namespace std;
+
+int main() {
+    int size, sumEven = 0, sumOdd=0, evenCounter =0, oddCounter=0;
+    
+    cout << "Enter size of array: ";
+    cin >> size;
+    int numbers[size];
+
+    cout << "Enter array elements: ";
+    for (int i = 0; i < size; i++) {
+        cin >> numbers[i];
+    }
+
+    //sum of even elements
+    for (int i=0;i<size;i++) {
+        if (numbers[i]%2==0) {
+            evenCounter++;
+            sumEven += numbers[i];
+        }
+    }
+
+    //sum of odd
+    for (int i=0;i<size;i++) {
+        if (numbers[i]%2!=0) {
+            oddCounter++;
+            sumOdd += numbers[i];
+        }
+    }
+
+    cout<<"Sum of even elements: "<<sumEven<<endl;
+    cout<<"Sum of odd elements: "<<sumOdd<<endl;
+    if (oddCounter==0) {
+        cout<<"There are no odd elements in the array!"<<endl;
+    }else if (evenCounter==0) {
+        cout<<"There are no even elements in the array!"<<endl;
+    }else {
+        cout<<"Ratio between even and odd elements: "<<
+            (float)evenCounter/oddCounter<<endl;
+    }
+
+    return 0;
+
+}
