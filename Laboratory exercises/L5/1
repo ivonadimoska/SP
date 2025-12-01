@@ -1,0 +1,47 @@
+//From the standard input, a number n and n elements
+//of an array(real numbers) are read.
+//The array should be transformed such that elements greater than
+//the average of the elements in the array are
+//replaced with the largest value in the array.
+//The transformed array should be printed on the screen
+
+#include<iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cin>>n;
+    float numbers[n];
+
+
+    for(int i=0;i<n;i++) {
+        cin>>numbers[i];
+    }
+    
+    float sum=0;
+    
+    for(int i=0;i<n;i++) {
+        sum+=numbers[i];
+    }
+    float average = float(sum)/n;
+
+    float max = numbers[0];
+
+    for(int i=1;i<n;i++) {
+        if(numbers[i]>max) {
+            max = numbers[i];
+        }
+    }
+    for(int i=0;i<n;i++){
+        if(numbers[i]>average) {
+            numbers[i] = max;
+        }
+    }
+
+    for(int i=0;i<n;i++) {
+        cout<<numbers[i]<<" ";
+    }
+
+    return 0;
+
+}
